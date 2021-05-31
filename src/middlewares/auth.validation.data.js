@@ -5,9 +5,7 @@ const signUpValidation = data => {
   const schema = Joi.object({
     name: Joi.string().min(2).required(),
     lastname: Joi.string().min(3).required(),
-    nickname: Joi.string().required(),
     email: Joi.string().min(6).required().email(),
-    address: Joi.string().min(3).required(),
     password: Joi.string().min(6).required()
   })
   return schema.validate(data);

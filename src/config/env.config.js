@@ -12,9 +12,9 @@ process.env.PORT = process.env.PORT || 3000;
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
 //=====================
-//Token expiration time
+//Token expiration time in miliseconds 1 min = 60000
 //=====================
-process.env.TOKEN_EXPIRY = 30000;
+process.env.TOKEN_EXPIRY = 60000;
 
 //=====================
 //authtentication SEED

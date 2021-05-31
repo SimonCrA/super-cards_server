@@ -125,7 +125,7 @@ exports.disableById = (req, res) => {
 }
 
 exports.removeById = (req, res) => {
-  User.findByIdAndDelete(req.params.userId, (err, userDeleted) => {
+  User.findByIdAndDelete(req.params.userId, {useFindAndModify: false} ,(err, userDeleted) => {
     if (err) {
       return res.status(500).json({
         ok: false,

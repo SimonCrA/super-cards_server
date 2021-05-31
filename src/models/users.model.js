@@ -11,10 +11,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  nickname: {
-    type: String,
-    required: true
-  },
   email: {
     type: String,
     required: true,
@@ -24,37 +20,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  address: {
-    type: String,
-    required: false
-  },
   status: {
     type: Boolean,
     default: true
-  },
-  img: {
-    type: String,
-    required: false
-  },
-  permissionLevel: {
-    type: Number,
-    default: 1
-  },
-  reminder: {
-    type: Boolean,
-    default: false
-  },
-  points: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Points'
-  },
-  goals: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Goals'
-  },
-  notifications: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Notifications'
   }
 
 });

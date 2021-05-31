@@ -11,7 +11,6 @@ const options = {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true
-  
 };
 
 exports.connectDbWithRetry = () => {
