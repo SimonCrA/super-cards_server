@@ -89,9 +89,7 @@ exports.patchById = async (req, res) => {
       }
       res.status(200).json({
         ok: true,
-        user: {
-          id: userUpdated._id
-        }
+        user: userUpdated
       });
     })
 

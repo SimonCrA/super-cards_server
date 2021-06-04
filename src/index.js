@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('./services/mongoose.service')
 
 const UsersRouter = require('./routes/users.routes')
+const CardsRouter = require('./routes/cards.routes')
 const AuthorizationRouter = require('./routes/authentication.routes')
 
 app.use(function (req, res, next) {
@@ -34,6 +35,7 @@ app.use(bodyParser.json())
 
 //connect routes
 UsersRouter.routesConfig(app)
+CardsRouter.routesConfig(app)
 AuthorizationRouter.routesConfig(app)
 
 
