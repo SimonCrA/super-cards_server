@@ -103,10 +103,32 @@ exports.disableById = (req, res) => {
     } else {
       res.status(200).json({
         ok: true,
-        user: {
+        card: {
           id: cardDisabled._id,
-          message: 'user Disabled'
+          message: 'card Disabled'
         }
+      });
+    }
+  })
+}
+
+exports.deleteById = (req, res) => {
+
+  Card.findByIdAndRemove(req.params.cardId, (err, cardDeleted) => {
+    if (err) {
+      return res.status(500).json({
+        ok: false,
+        err: 'bad Request'
+      });
+    } else if (!cardDeleted) {
+      return res.status(404).json({
+        ok: false,
+        err: 'Card not found or already deleted'
+      });
+    } else {
+      res.status(200).json({
+        ok: true,
+        card: 'Card deleted succesfully'
       });
     }
   })

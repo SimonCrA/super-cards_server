@@ -21,12 +21,27 @@ const cardsSchema = new mongoose.Schema({
     validator: [colorValidator, 'Invalid color'],
     required: true
   },
+  iconColor: {
+    type: String,
+    validator: [colorValidator, 'Invalid color'],
+    required: true
+  },
   textColor: {
     type: String,
     validator: [colorValidator, 'Invalid color'],
     required: true
   },
-  itemsColor: {
+  barColor: {
+    type: String,
+    validator: [colorValidator, 'Invalid color'],
+    required: true
+  },
+  cardColor: {
+    type: String,
+    validator: [colorValidator, 'Invalid color'],
+    required: true
+  },
+  footerColor: {
     type: String,
     validator: [colorValidator, 'Invalid color'],
     required: true

@@ -18,4 +18,7 @@ exports.routesConfig = (app) => {
   app.delete('/api/cards/:cardId',[
     AuthorizationMiddleware.verifyValidJWT
   ], CardsController.disableById)
+  app.delete('/api/cards/delete/:cardId',[
+    AuthorizationMiddleware.verifyValidJWT
+  ], CardsController.deleteById)
 }
